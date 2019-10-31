@@ -1,7 +1,9 @@
-import React from "react";
-import "./App.css";
-import CartContainer from "./components/CartContainer";
-import { Route, BrowserRouter } from "react-router-dom";
+
+
+import React from 'react';
+import './App.css';
+import CartContainer from './components/CartContainer';
+import { Route, BrowserRouter } from 'react-router-dom';
 import ProductListContainer from "./components/ProductListContainer";
 import ProductPageContainer from "./components/ProductPageContainer";
 
