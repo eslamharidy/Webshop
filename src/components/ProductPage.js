@@ -43,7 +43,7 @@ export function ProductPage(props) {
               </div>
               <p>{product.price}</p>
               <button onClick={() => props.setItems(product)}>ADD TO CART</button>
-              <button> <Link to="/checkout">Buy Now</Link></button>
+              <button onClick={() => props.setItems(product)}> <Link to="/checkout">Buy Now</Link></button>
               <button onClick={() => props.setItemsWishList(product)}>
                 ADD TO WISHLIST
             </button>

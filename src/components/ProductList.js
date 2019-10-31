@@ -3,7 +3,6 @@ import React from "react";
 import { setItems } from "../actions/Cart";
 import { setItemsWishList } from "../actions/WishList";
 import { connect } from "react-redux";
-
 import { Link } from "react-router-dom";
 
 function ProductList(props) {
@@ -20,7 +19,8 @@ function ProductList(props) {
               />
               <p>{product.name}</p>
             </Link>
-            <div className="buttons">
+<div className="buttons">
+            <button onClick={() => props.setItems(product)}> <Link to="/checkout">Buy Now</Link></button>
               <button onClick={() => props.setItems(product)}>
                 ADD TO CART
               </button>
@@ -28,6 +28,7 @@ function ProductList(props) {
                 ADD TO WISHLIST
               </button>
             </div>
+
           </li>
         ))}
       </ul>
