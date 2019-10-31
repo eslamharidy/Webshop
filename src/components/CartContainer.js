@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
 import Cart from "./Cart";
+
 
 class CartContainer extends Component {
   render() {

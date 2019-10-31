@@ -12,7 +12,7 @@ class ProductPageContainer extends Component {
   }
 
   render() {
-    console.log("hi from comp id", this.props.match.params.id);
+
 
     if (!this.props.products) {
       return <p>Loading...</p>;

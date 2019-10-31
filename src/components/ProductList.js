@@ -13,6 +13,7 @@ function ProductList(props) {
         {props.products.map(product => (
           <li key={product.id}>
             <Link to={`/product/${product.id}`}>
+
               <img
                 style={{ width: 300, height: 350 }}
                 src={product.imageUrl}
@@ -24,6 +25,7 @@ function ProductList(props) {
             <button onClick={() => props.setItemsWishList(product)}>
               ADD TO WISHLIST
             </button>
+
           </li>
         ))}
       </ul>
