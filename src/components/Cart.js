@@ -9,7 +9,7 @@ function Cart(props) {
         <div>
             <h1>Your Shopping cart</h1>
             <Link to="/">Continue Shopping</Link>
-            <Link to="/checkout"> Checkout</Link>
+
             {props.items.length > 0 ? (
                 props.items.map(item => {
                     return (
@@ -31,6 +31,7 @@ function Cart(props) {
             ) : (
                     <p>"NO ITEMS IN THE CART"</p>
                 )}
+            <button> <Link to="/checkout"> Checkout</Link></button>
         </div>
     );
 }
