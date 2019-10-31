@@ -1,13 +1,24 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 
+export default function Checkout(props) {
 
-export default function Cart(props) {
+    // handleSubmit = (event) => {
+    //     event.preventDefault()
+    //     if (this.state.title) {
+    //         this.props.createAlbum(this.state.title)
+    //     }
+    // }
+
+    // handleChange = (event) => {
+    //     this.setState({ [event.target.name]: event.target.value })
+    // }
+
+
     return (
         <div>
-            <h1>Your Shopping cart</h1>
+            <h1>Checkout</h1>
             <Link to="/">Continue Shopping</Link>
-            <Link to="/checkout"> Checkout</Link>
             {props.items.map(item => {
                 return (
                     <div style={{ display: "flex" }}>
@@ -23,6 +34,13 @@ export default function Cart(props) {
                         <p>{item.price}</p>
                     </div>)
             })}
-
+            <form /*onSubmit={this.handleSubmit}*/>
+                <label>
+                    Title:
+          <input type="text" name="title" /*value={this.state.title} onChange={this.handleChange}*/ />
+                </label>
+                <button type="submit">Add</button>
+            </form>
         </div>)
-};
+}
+

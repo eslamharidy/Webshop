@@ -15,13 +15,15 @@ function ProductList(props) {
       <ul style={{ listStyle: "none" }}>
         {props.products.map(product => (
           <li key={product.id}>
-<Link to={`/product/${product.id}`}>
-            <img style={{ width: 300, height: 350 }} src={product.imageUrl} alt={product.title} />
-            <p>{product.name}</p>
-</Link>
+            <Link to={`/product/${product.id}`}>
+              <img style={{ width: 300, height: 350 }} src={product.imageUrl} alt={product.title} />
+              <h1>{product.name}</h1>
+              <p>{product.price}</p>
+
+            </Link>
             <button onClick={() => props.setItems(product)}>ADD TO CART</button>
-            
-     
+
+
           </li>
         ))}
       </ul>
