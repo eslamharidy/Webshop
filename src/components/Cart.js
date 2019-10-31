@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { setItems } from "../actions/Cart";
+
 import { removeItems } from "../actions/Cart";
 
 function Cart(props) {
@@ -38,6 +38,6 @@ function Cart(props) {
   );
 }
 export default connect(
-  null,
-  { setItems, removeItems }
+    null,
+    { removeItems }
 )(Cart);
