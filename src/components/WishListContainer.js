@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import Cart from "./Cart";
+import WishList from "./WishList";
 
-class CartContainer extends Component {
+class WishListContainer extends Component {
   render() {
     if (!this.props.items) {
       return <p>Loading...</p>;
     } else {
-      return <Cart items={this.props.items} />;
+      return <WishList items={this.props.items} />;
     }
   }
 }
 
 const mapStateToProps = state => {
   return {
-    items: state.cart
+    items: state.wishlist
   };
 };
 
-export default connect(mapStateToProps)(CartContainer);
+export default connect(mapStateToProps)(WishListContainer);
