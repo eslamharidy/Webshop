@@ -2,6 +2,7 @@ import React from "react";
 import { setItems } from '../actions/Cart';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
+import { setItemsWishList } from '../actions/WishList';
 
 export function ProductPage(props) {
   console.log("product page ", props);
@@ -22,7 +23,7 @@ export function ProductPage(props) {
               /></Link>
 
               <Link to="/">Continue Shopping</Link>
-              <Link to="/checkout"> Checkout</Link>
+
               <p>{product.title}</p>
               <p>{product.description}</p>
               <img
@@ -42,8 +43,10 @@ export function ProductPage(props) {
               </div>
               <p>{product.price}</p>
               <button onClick={() => props.setItems(product)}>ADD TO CART</button>
-              <button onClick={() => alert('This button is not working since the webshop is only for learning purpose! ')}>Buy Now</button>
-
+              <button> <Link to="/checkout">Buy Now</Link></button>
+              <button onClick={() => props.setItemsWishList(product)}>
+                ADD TO WISHLIST
+            </button>
             </div>
 
           );
@@ -53,4 +56,4 @@ export function ProductPage(props) {
 }
 
 
-export default connect(null, { setItems })(ProductPage);
+export default connect(null, { setItems, setItemsWishList })(ProductPage);
