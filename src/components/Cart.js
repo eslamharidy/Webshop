@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { removeItems } from "../actions/Cart";
 
 function Cart(props) {
+
     return (
         <div>
             <h1>Your Shopping cart</h1>
@@ -34,10 +35,9 @@ function Cart(props) {
             <button> <Link to="/checkout"> Checkout</Link></button>
         </div>
     );
-}
 
+}
 export default connect(
     null,
     { removeItems }
 )(Cart);
-

@@ -7,12 +7,11 @@ import { Link } from "react-router-dom";
 
 function ProductList(props) {
   return (
-    <div>
+    <div className="product-list-container">
       <ul style={{ listStyle: "none" }}>
         {props.products.map(product => (
-          <li key={product.id}>
+          <li class="product-list" key={product.id}>
             <Link to={`/product/${product.id}`}>
-
               <img
                 style={{ width: 300, height: 350 }}
                 src={product.imageUrl}
@@ -20,11 +19,15 @@ function ProductList(props) {
               />
               <p>{product.name}</p>
             </Link>
-            <button onClick={() => props.setItems(product)}>ADD TO CART</button>
-            <button onClick={() => props.setItemsWishList(product)}>
-              ADD TO WISHLIST
-            </button>
+<div className="buttons">
             <button onClick={() => props.setItems(product)}> <Link to="/checkout">Buy Now</Link></button>
+              <button onClick={() => props.setItems(product)}>
+                ADD TO CART
+              </button>
+              <button onClick={() => props.setItemsWishList(product)}>
+                ADD TO WISHLIST
+              </button>
+            </div>
 
           </li>
         ))}
