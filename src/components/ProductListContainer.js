@@ -7,11 +7,10 @@ import { Link } from "react-router-dom";
 class ProductListContainer extends Component {
   componentDidMount() {
     this.props.getProducts();
-    // console.log("hooooo", this.props);
   }
 
   render() {
-    // console.log("hiiiiiii", this.props);
+
     if (!this.props.products) {
       return <p>Loading...</p>;
     } else {
