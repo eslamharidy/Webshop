@@ -3,7 +3,6 @@ import React from 'react';
 import './App.css';
 import CartContainer from './components/CartContainer';
 import { Route, BrowserRouter } from 'react-router-dom';
-import Homepage from "./components/Homepage";
 import ProductListContainer from "./components/ProductListContainer";
 
 
