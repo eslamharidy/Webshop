@@ -1,33 +1,24 @@
-
 export const SET_ITEMS = "SET_ITEMS";
+export const REMOVE_ITEMS = "REMOVE_ITEMS";
 
+export const setItems = items => dispatch => {
+  console.log(items, "clicked");
 
-export const setItems = (items) => (dispatch) => {
-    console.log(items, "clicked")
+  const action = {
+    type: SET_ITEMS,
+    payload: items
+  };
 
-    const action = {
-        type: SET_ITEMS,
-        payload: items
-    }
+  dispatch(action);
+};
 
-    dispatch(action)
+export const removeItems = id => dispatch => {
+  console.log(id, "clicked");
 
-}
-// export function addItem(item) {
-//     return {
-//         type: ADD_ITEM,
-//         payload: item
-//     }
+  const action = {
+    type: REMOVE_ITEMS,
+    payload: id
+  };
 
-// }
-
-// export function getItems() {
-//     return function (dispatch) {
-//         //         fetch(`https://my-json-server.typicode.com/mtabanja/webshop/blob/master/Products`)
-//         //             .then(res => res.json())
-//         //             .then(data => {
-//         // console.log("data", data);
-//         dispatch(setItems())
-//     };
-// }
-// }
+  dispatch(action);
+};
