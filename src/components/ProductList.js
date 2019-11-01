@@ -13,14 +13,17 @@ function ProductList(props) {
     <div>
       <ul className="product-list-container">
         {props.products.map(product => (
-          <li class="product-list" key={product.id}>
+          <li className="product-list" key={product.id}>
             <Link to={`/product/${product.id}`}>
               <img src={product.imageUrl} alt={product.title} />
               <p>{product.name}</p>
               <p>{product.price} €</p>
             </Link>
             <div className="buttons">
-              <button onClick={() => props.setItems(product)}> <Link to="/checkout">Buy Now</Link></button>
+              <button onClick={() => props.setItems(product)}>
+                {" "}
+                <Link to="/checkout">Buy Now</Link>
+              </button>
               <button onClick={() => props.setItems(product)}>
                 ADD TO CART
               </button>
@@ -28,7 +31,6 @@ function ProductList(props) {
                 ADD TO WISHLIST
               </button>
             </div>
-
           </li>
         ))}
       </ul>

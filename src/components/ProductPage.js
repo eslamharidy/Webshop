@@ -6,7 +6,6 @@ import { setItemsWishList } from "../actions/WishList";
 import "./ProductPage.css";
 
 export function ProductPage(props) {
-  console.log("product page ", props);
   const styles = {
     width: 100,
     height: 100
@@ -16,42 +15,63 @@ export function ProductPage(props) {
     <div>
       {props.products &&
         props.products.map(product => {
-          let imageurl = product.imageUrl;
           return (
             <div>
-              <Link to={`/cart`}>
-                <img
-                  style={{ width: "25px", height: "20px" }}
-                  src="https://www.goodfreephotos.com/albums/vector-images/shopping-cart-vector-clipart.png"
-                  alt="cart"
-                />
-              </Link>
-
-              <Link to="/">Continue Shopping</Link>
-
-              <p>{product.title}</p>
-              <p>{product.description}</p>
-              <img
-                onClick={() => {
-                  imageurl = product.url1;
-                  console.log("buttonclick", imageurl);
-                }}
-                style={{ width: 500, height: 500 }}
-                src={imageurl}
-                key={product.id}
-                alt={product.title}
-              />
-              <div>
-                <img style={styles} src={product.url1} alt={product.title} />
-                <img style={styles} src={product.url2} alt={product.title} />
-                <img style={styles} src={product.url3} alt={product.title} />
+              <div className="product-container">
+                <div className="imgs-container">
+                  <img
+                    style={{ width: 500, height: 500 }}
+                    src={product.imageUrl}
+                    key={product.id}
+                    alt={product.title}
+                  />
+                  <div className="small-imgs">
+                    <img
+                      style={styles}
+                      src={product.url1}
+                      alt={product.title}
+                    />
+                    <img
+                      style={styles}
+                      src={product.url2}
+                      alt={product.title}
+                    />
+                    <img
+                      style={styles}
+                      src={product.url3}
+                      alt={product.title}
+                    />
+                  </div>
+                  <p>{product.price} €</p>
+                </div>
               </div>
-              <p>{product.price} €</p>
-              <button onClick={() => props.setItems(product)}>ADD TO CART</button>
-              <button onClick={() => props.setItems(product)}> <Link to="/checkout">Buy Now</Link></button>
-              <button onClick={() => props.setItemsWishList(product)}>
-                ADD TO WISHLIST
-              </button>
+              <div className="buttons-description-container">
+                <p className="product-title">{product.name}</p>
+                <p className="product-des">{product.description}</p>
+                <div className="buttons-container">
+                  <button
+                    className="product-button"
+                    onClick={() => props.setItems(product)}
+                  >
+                    ADD TO CART
+                  </button>
+                  <button
+                    className="product-button"
+                    onClick={() => props.setItems(product)}
+                  >
+                    <Link to="/checkout">Buy Now</Link>
+                  </button>
+                  <button
+                    className="product-button"
+                    onClick={() => props.setItemsWishList(product)}
+                  >
+                    ADD TO WISHLIST
+                  </button>
+                  <Link style={{ textDecoration: "none" }} to="/">
+                    <h1>Continue Shopping</h1>
+                  </Link>
+                </div>
+              </div>
             </div>
           );
         })}

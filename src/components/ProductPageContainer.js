@@ -6,14 +6,11 @@ import { getProductById } from "../actions/Products";
 class ProductPageContainer extends Component {
   componentDidMount() {
     const productId = this.props.match.params.id;
-    console.log("hi from comp id", this.props.match.params.id);
-    console.log("hi from pp", this.props.products);
+
     this.props.getProductById(productId);
   }
 
   render() {
-
-
     if (!this.props.products) {
       return <p>Loading...</p>;
     } else {

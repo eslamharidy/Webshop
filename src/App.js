@@ -13,6 +13,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
+
         <Route path="/cart" exact component={CartContainer} />
         <Route path="/wishlist" exact component={WishListContainer} />
         <Route path="/" exact component={ProductListContainer} />
