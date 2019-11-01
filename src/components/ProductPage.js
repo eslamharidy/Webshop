@@ -1,8 +1,9 @@
 import React from "react";
-import { setItems } from '../actions/Cart';
-import { connect } from 'react-redux';
+import { setItems } from "../actions/Cart";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { setItemsWishList } from '../actions/WishList';
+import { setItemsWishList } from "../actions/WishList";
+import "./ProductPage.css";
 
 export function ProductPage(props) {
   console.log("product page ", props);
@@ -18,9 +19,13 @@ export function ProductPage(props) {
           let imageurl = product.imageUrl;
           return (
             <div>
-              <Link to={`/cart`}><img style={{ width: "25px", height: "20px" }} src="https://www.goodfreephotos.com/albums/vector-images/shopping-cart-vector-clipart.png"
-                alt="cart"
-              /></Link>
+              <Link to={`/cart`}>
+                <img
+                  style={{ width: "25px", height: "20px" }}
+                  src="https://www.goodfreephotos.com/albums/vector-images/shopping-cart-vector-clipart.png"
+                  alt="cart"
+                />
+              </Link>
 
               <Link to="/">Continue Shopping</Link>
 
@@ -46,14 +51,15 @@ export function ProductPage(props) {
               <button onClick={() => props.setItems(product)}> <Link to="/checkout">Buy Now</Link></button>
               <button onClick={() => props.setItemsWishList(product)}>
                 ADD TO WISHLIST
-            </button>
+              </button>
             </div>
-
           );
         })}
     </div>
   );
 }
 
-
-export default connect(null, { setItems, setItemsWishList })(ProductPage);
+export default connect(
+  null,
+  { setItems, setItemsWishList }
+)(ProductPage);
