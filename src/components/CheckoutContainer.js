@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import { getItems } from "../actions/Cart";
-import Cart from './Cart';
 import Checkout from './Checkout';
 
 class CheckoutContainer extends Component {

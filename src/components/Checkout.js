@@ -1,24 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { removeItems } from "../actions/Cart";
 
-export default function Checkout(props) {
-
-    // handleSubmit = (event) => {
-    //     event.preventDefault()
-    //     if (this.state.title) {
-    //         this.props.createAlbum(this.state.title)
-    //     }
-    // }
-
-    // handleChange = (event) => {
-    //     this.setState({ [event.target.name]: event.target.value })
-    // }
-
-
+export function Checkout(props) {
+    const totalPrice = props.items.map(item => item.price).reduce((a, b) => a + b, 0);
     return (
         <div>
             <h1>Checkout</h1>
             <Link to="/">Continue Shopping</Link>
+            <Link to={`/cart`}>
+                <img
+                    style={{ width: "25px", height: "20px" }}
+                    src="https://www.goodfreephotos.com/albums/vector-images/shopping-cart-vector-clipart.png"
+                    alt="cart"
+                /> Go to Cart
+          </Link>
             {props.items.map(item => {
                 return (
                     <div style={{ display: "flex" }}>
@@ -31,16 +28,46 @@ export default function Checkout(props) {
                             style={{ maxWidth: 180, borderRadius: 40, display: "flex", margin: '10px' }} />
 
                         <p>{item.inStock > 0 ? '' : 'this item is out of stock'}</p>
-                        <p>{item.price}</p>
+                        <p>{item.price} €</p>
+                        <button onClick={() => props.removeItems(item.id)}>Remove </button>
                     </div>)
             })}
-            <form /*onSubmit={this.handleSubmit}*/>
+            <div> Total price {totalPrice} €</div>
+            <form > <p>Please fill the Shipping informations below :</p>
                 <label>
-                    Title:
-          <input type="text" name="title" /*value={this.state.title} onChange={this.handleChange}*/ />
+                    First Name :
+          <input type="text" name="title" />
                 </label>
-                <button type="submit">Add</button>
+                <label>
+                    Last Name :
+          <input type="text" name="title" />
+                </label>
+                <label>
+                    Street Name :
+          <input type="text" name="title" />
+                </label>
+                <label>
+                    House Number :
+          <input type="text" name="title" />
+                </label>
+                <label>
+                    Post code:
+          <input type="text" name="title" />
+                </label>
+                <label>
+                    City :
+          <input type="text" name="title" />
+                </label>
+                <label>
+                    Country :
+          <input type="text" name="title" />
+                </label>
+                <button type="submit" onClick={() => alert('oops! no payment page available. but in realworld project we can add many more features as required! ')}>to payment page</button>
             </form>
         </div>)
 }
 
+export default connect(
+    null,
+    { removeItems }
+)(Checkout);

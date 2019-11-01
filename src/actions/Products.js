@@ -9,7 +9,6 @@ export function setProducts(products) {
 }
 
 export function setProductId(products) {
-  console.log("hi from pro setproduct id", products);
   return {
     type: GET_PRODUCT_ID,
     payload: products
@@ -17,7 +16,7 @@ export function setProductId(products) {
 }
 
 export function getProducts() {
-  return function(dispatch) {
+  return function (dispatch) {
     fetch("https://my-json-server.typicode.com/mtabanja/api/products")
       .then(res => res.json())
       .then(data => {
@@ -28,14 +27,13 @@ export function getProducts() {
 }
 
 export function getProductById(productId) {
-  return function(dispatch) {
+  return function (dispatch) {
     fetch(
       `https://my-json-server.typicode.com/mtabanja/api/products?id=${productId}`
     )
       .then(res => res.json())
       .then(data => {
         dispatch(setProductId(data));
-        console.log("Hi FROM DATA", data);
       });
   };
 }

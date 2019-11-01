@@ -46,8 +46,7 @@ export function ProductPage(props) {
                 <img style={styles} src={product.url2} alt={product.title} />
                 <img style={styles} src={product.url3} alt={product.title} />
               </div>
-              <p>{product.price}</p>
-
+              <p>{product.price} €</p>
               <button onClick={() => props.setItems(product)}>ADD TO CART</button>
               <button onClick={() => props.setItems(product)}> <Link to="/checkout">Buy Now</Link></button>
               <button onClick={() => props.setItemsWishList(product)}>
