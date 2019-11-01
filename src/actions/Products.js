@@ -21,7 +21,6 @@ export function getProducts() {
       .then(res => res.json())
       .then(data => {
         dispatch(setProducts(data));
-        console.log("Hi FROM data", data);
       });
   };
 }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import ProductList from "./ProductList";
 import { getProducts } from "../actions/Products";
-import { Link } from "react-router-dom";
+
 
 class ProductListContainer extends Component {
   componentDidMount() {

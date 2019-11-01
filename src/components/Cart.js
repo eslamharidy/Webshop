@@ -9,7 +9,7 @@ function Cart(props) {
     return (
         <div className="cart-wrapper">
             <h1>Your Shopping cart</h1>
-            <Link to="/">Continue Shopping</Link>
+            <Link style={{ textDecoration: "none" }} to="/">Continue Shopping</Link>
 
             {props.items.length > 0 ? (
                 props.items.map(item => {
@@ -21,26 +21,27 @@ function Cart(props) {
                                 src={item.imageUrl}
                                 key={item.id}
                                 alt={item.name}
-                               />
+                            />
 
                             <p>{item.inStock > 0 ? '' : 'this item is out of stock'}</p>
                             <p>{item.price} €</p>
                             <div className="cart-remove-button">
-                <button onClick={() => props.removeItems(item.id)}>
-                  REMOVE FROM CART
+                                <button onClick={() => props.removeItems(item.id)}>
+                                    REMOVE FROM CART
                 </button>
-              </div>
+                            </div> <button> <Link style={{ textDecoration: "none" }} to="/checkout"> Checkout</Link></button>
                         </div>
+
                     );
                 })
             ) : (
                     <p>"NO ITEMS IN THE CART"</p>
                 )}
-            <button> <Link to="/checkout"> Checkout</Link></button>
+
         </div>
     );
 }
 export default connect(
-  null,
-  { removeItems }
+    null,
+    { removeItems }
 )(Cart);

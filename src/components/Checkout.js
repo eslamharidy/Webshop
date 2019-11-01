@@ -8,8 +8,8 @@ export function Checkout(props) {
     return (
         <div>
             <h1>Checkout</h1>
-            <Link to="/">Continue Shopping</Link>
-            <Link to={`/cart`}>
+            <Link style={{ textDecoration: "none" }} to="/">Continue Shopping</Link>
+            <Link style={{ textDecoration: "none" }} to={`/cart`}>
                 <img
                     style={{ width: "25px", height: "20px" }}
                     src="https://www.goodfreephotos.com/albums/vector-images/shopping-cart-vector-clipart.png"
