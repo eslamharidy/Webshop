@@ -16,18 +16,17 @@ export function setProductId(products) {
 }
 
 export function getProducts() {
-  return function (dispatch) {
+  return function(dispatch) {
     fetch("https://my-json-server.typicode.com/mtabanja/api/products")
       .then(res => res.json())
       .then(data => {
         dispatch(setProducts(data));
-        console.log("Hi FROM data", data);
       });
   };
 }
 
 export function getProductById(productId) {
-  return function (dispatch) {
+  return function(dispatch) {
     fetch(
       `https://my-json-server.typicode.com/mtabanja/api/products?id=${productId}`
     )
