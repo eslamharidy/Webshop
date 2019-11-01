@@ -8,19 +8,19 @@ export default class Navbar extends Component {
       <div>
         <div className="navbar-wrapper">
           <div className="navbar">
-            <Link style={{ textDecoration: "none" }} to={`/`}>
+            <Link style={{ textDecoration: "none", color: "black" }} to={`/`}>
               <img className="logo" src={require("../logo.svg")} alt="logo" />
 
             </Link>
             <div className="icons-container">
-              <Link style={{ textDecoration: "none" }} to={`/cart`}>
+              <Link style={{ textDecoration: "none", color: "black" }} to={`/cart`}>
                 <img
                   className="cart-icon"
                   src={require("../cart.svg")}
                   alt="cart"
                 />
               </Link>
-              <Link style={{ textDecoration: "none" }} to={`/wishlist`}>
+              <Link style={{ textDecoration: "none", color: "black" }} to={`/wishlist`}>
                 <img
                   className="wishlist-icon"
                   src={require("../wishlist.svg")}

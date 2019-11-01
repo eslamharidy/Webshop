@@ -9,7 +9,7 @@ function Cart(props) {
     return (
         <div className="cart-wrapper">
             <h1>Your Shopping cart</h1>
-            <Link style={{ textDecoration: "none" }} to="/">Continue Shopping</Link>
+            <Link style={{ textDecoration: "none", color: "black" }} to="/">Continue Shopping</Link>
 
             {props.items.length > 0 ? (
                 props.items.map(item => {
@@ -29,7 +29,7 @@ function Cart(props) {
                                 <button onClick={() => props.removeItems(item.id)}>
                                     REMOVE FROM CART
                 </button>
-                            </div> <button> <Link style={{ textDecoration: "none" }} to="/checkout"> Checkout</Link></button>
+                            </div> <button> <Link style={{ textDecoration: "none", color: "black" }} to="/checkout"> Checkout</Link></button>
                         </div>
 
                     );

@@ -6,6 +6,10 @@ import { setItemsWishList } from "../actions/WishList";
 import "./ProductPage.css";
 
 export function ProductPage(props) {
+  const style = {
+    width: "100px",
+    height: "100px"
+  }
   return (
     <div>
       {props.products &&
@@ -22,17 +26,17 @@ export function ProductPage(props) {
                   />
                   <div className="small-imgs">
                     <img
-                      style={styles}
+                      style={style}
                       src={product.url1}
                       alt={product.title}
                     />
                     <img
-                      style={styles}
+                      style={style}
                       src={product.url2}
                       alt={product.title}
                     />
                     <img
-                      style={styles}
+                      style={style}
                       src={product.url3}
                       alt={product.title}
                     />
@@ -54,7 +58,7 @@ export function ProductPage(props) {
                     className="product-button"
                     onClick={() => props.setItems(product)}
                   >
-                    <Link to="/checkout">Buy Now</Link>
+                    <Link style={{ textDecoration: "none", color: "black" }} to="/checkout">Buy Now</Link>
                   </button>
                   <button
                     className="product-button"
@@ -62,7 +66,7 @@ export function ProductPage(props) {
                   >
                     ADD TO WISHLIST
                   </button>
-                  <Link style={{ textDecoration: "none" }} to="/">
+                  <Link style={{ textDecoration: "none", color: "black" }} to="/">
                     <h1>Continue Shopping</h1>
                   </Link>
                 </div>

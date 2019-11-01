@@ -19,13 +19,13 @@ function ProductList(props) {
         <ul className="product-list-container">
           {props.products.map(product => (
             <li className="product-list" key={product.id}>
-              <Link style={{ textDecoration: "none" }} to={`/product/${product.id}`}>
+              <Link style={{ textDecoration: "none", color: "black" }} to={`/product/${product.id}`}>
                 <img src={product.imageUrl} alt={product.title} />
                 <p>{product.name}</p>
                 <p>{product.price} €</p>
               </Link>
               <div className="buttons">
-                <button onClick={() => props.setItems(product)}> <Link style={{ textDecoration: "none" }} to="/checkout">Buy Now</Link></button>
+                <button onClick={() => props.setItems(product)}> <Link style={{ textDecoration: "none", color: "black" }} to="/checkout">Buy Now</Link></button>
                 <button onClick={() => props.setItems(product)}>
                   ADD TO CART
               </button>

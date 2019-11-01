@@ -9,7 +9,7 @@ export function WishList(props) {
   return (
     <div className="wishlist-wrapper">
       <h1>WISH LIST</h1>
-      <Link style={{ textDecoration: "none" }} to="/">Continue Shopping</Link>
+      <Link style={{ textDecoration: "none", color: "black" }} to="/">Continue Shopping</Link>
       {props.items.length > 0 ? (
         props.items.map(item => {
           return (
@@ -27,7 +27,7 @@ export function WishList(props) {
                 </button>
                 <button onClick={() => props.setItems(item)}>
                   {" "}
-                  <Link style={{ textDecoration: "none" }}  to="/checkout">Buy Now</Link>
+                  <Link style={{ textDecoration: "none", color: "black" }} to="/checkout">Buy Now</Link>
                 </button>
                 <button onClick={() => props.removeItems(item.id)}>
                   Remove{" "}
@@ -38,8 +38,8 @@ export function WishList(props) {
           );
         })
       ) : (
-        <p>Your WishList is empty</p>
-      )}
+          <p>Your WishList is empty</p>
+        )}
     </div>
   );
 }
