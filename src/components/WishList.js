@@ -31,7 +31,7 @@ export function WishList(props) {
               <p>{item.inStock > 0 ? "" : "this item is out of stock"}</p>
               <p>{item.price}</p>
               <button onClick={() => props.setItems(item)}>ADD TO CART</button>
-              <button> <Link to="/checkout">Buy Now</Link></button>
+              <button onClick={() => props.setItems(item)}> <Link to="/checkout">Buy Now</Link></button>
               <button onClick={() => props.removeItems(item.id)}>Remove </button>
             </div>
           );
