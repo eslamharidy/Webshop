@@ -3,20 +3,19 @@ import React from "react";
 import { setItems } from "../actions/Cart";
 import { setItemsWishList } from "../actions/WishList";
 import { connect } from "react-redux";
+
+import "./ProductList.css";
+
 import { Link } from "react-router-dom";
 
 function ProductList(props) {
   return (
-    <div className="product-list-container">
-      <ul style={{ listStyle: "none" }}>
+    <div>
+      <ul className="product-list-container">
         {props.products.map(product => (
           <li class="product-list" key={product.id}>
             <Link to={`/product/${product.id}`}>
-              <img
-                style={{ width: 300, height: 350 }}
-                src={product.imageUrl}
-                alt={product.title}
-              />
+              <img src={product.imageUrl} alt={product.title} />
               <p>{product.name}</p>
             </Link>
 <div className="buttons">
