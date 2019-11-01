@@ -1,37 +1,35 @@
 .navbar-wrapper {
   background-color: black;
-  height: 100px;
+  height: 10%;
   width: 100%;
   position: fixed;
 }
 
 .logo {
-  width: 100px;
+  width: 5%;
   color: white;
   border-radius: 50%;
   transition: transform 0.8s ease-in-out;
   cursor: pointer;
+  margin-top: 8px;
 }
 
 .logo:hover {
   transform: rotate(360deg);
 }
 .wishlist-icon {
-  width: 30px;
-  border-radius: 10px;
-  margin-right: 50px;
-  margin-bottom: -30px;
+  width: 25px;
+  border-radius: 5px;
+  margin-right: 30px;
 }
 
 .cart-icon {
-  width: 45px;
-  margin-right: 10px;
+  width: 30px;
+  margin-right: 25px;
   transform: rotate(0deg) scaleX(-1);
 }
 .icons-container {
   display: flex;
-  justify-content: right;
+  margin-top: -50px;
   flex-direction: row-reverse;
-  margin-top: -75px;
-  margin-right: 30px;
 }

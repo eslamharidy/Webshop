@@ -10,6 +10,7 @@ export default class Navbar extends Component {
           <div className="navbar">
             <Link style={{ textDecoration: "none" }} to={`/`}>
               <img className="logo" src={require("../logo.svg")} alt="logo" />
+
             </Link>
             <div className="icons-container">
               <Link style={{ textDecoration: "none" }} to={`/cart`}>

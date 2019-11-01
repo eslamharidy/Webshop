@@ -10,8 +10,6 @@ class ProductPageContainer extends Component {
   }
 
   render() {
-
-
     if (!this.props.products) {
       return <p>Loading...</p>;
     } else {
