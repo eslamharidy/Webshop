@@ -15,6 +15,9 @@ body {
   width: 300px;
   height: 350px;
 }
+
+
+
 .product-list-container {
   width: 80%;
   margin: auto;
@@ -23,4 +26,15 @@ body {
 
 .buttons {
   text-align: center;
+}
+
+
+.coverpic{
+width:90%;
+margin-top: 15vh;
+margin-left: 10vh;
+margin-right: 10vh;
+margin-bottom: 5vh;
+height:70vh;
+position: center;
 }

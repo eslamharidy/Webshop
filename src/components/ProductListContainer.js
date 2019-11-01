@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import ProductList from "./ProductList";
 import { getProducts } from "../actions/Products";
 
+
 class ProductListContainer extends Component {
   componentDidMount() {
     this.props.getProducts();

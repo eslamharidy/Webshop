@@ -6,7 +6,6 @@ import { getProductById } from "../actions/Products";
 class ProductPageContainer extends Component {
   componentDidMount() {
     const productId = this.props.match.params.id;
-
     this.props.getProductById(productId);
   }
 

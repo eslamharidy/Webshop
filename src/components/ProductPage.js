@@ -6,11 +6,6 @@ import { setItemsWishList } from "../actions/WishList";
 import "./ProductPage.css";
 
 export function ProductPage(props) {
-  const styles = {
-    width: 100,
-    height: 100
-  };
-
   return (
     <div>
       {props.products &&

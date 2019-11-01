@@ -2,7 +2,6 @@ export const SET_ITEMS = "SET_ITEMS";
 export const REMOVE_ITEMS = "REMOVE_ITEMS";
 
 export const setItems = items => dispatch => {
-    console.log(items, "clicked");
 
     const action = {
         type: SET_ITEMS,

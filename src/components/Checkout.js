@@ -4,25 +4,22 @@ import { connect } from "react-redux";
 import { removeItems } from "../actions/Cart";
 
 export function Checkout(props) {
-  const totalPrice = props.items
-    .map(item => item.price)
-    .reduce((a, b) => a + b, 0);
-  return (
-    <div>
-      <h1>Checkout</h1>
-      <Link to="/">Continue Shopping</Link>
-      <Link to={`/cart`}>
-        <img
-          style={{ width: "25px", height: "20px" }}
-          src="https://www.goodfreephotos.com/albums/vector-images/shopping-cart-vector-clipart.png"
-          alt="cart"
-        />{" "}
-        Go to Cart
-      </Link>
-      {props.items.map(item => {
-        return (
-          <div>
-            <p>{item.name} </p>
+    const totalPrice = props.items.map(item => item.price).reduce((a, b) => a + b, 0);
+    return (
+        <div>
+            <h1>Checkout</h1>
+            <Link style={{ textDecoration: "none" }} to="/">Continue Shopping</Link>
+            <Link style={{ textDecoration: "none" }} to={`/cart`}>
+                <img
+                    style={{ width: "25px", height: "20px" }}
+                    src="https://www.goodfreephotos.com/albums/vector-images/shopping-cart-vector-clipart.png"
+                    alt="cart"
+                /> Go to Cart
+          </Link>
+            {props.items.map(item => {
+                return (
+                    <div style={{ display: "flex" }}>
+                        <p style={{ display: "flex", margin: '10px' }}>{item.name} </p>
 
             <img
               src={item.imageUrl}

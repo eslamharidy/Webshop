@@ -9,7 +9,7 @@ export function WishList(props) {
   return (
     <div className="wishlist-wrapper">
       <h1>WISH LIST</h1>
-      <Link to="/">Continue Shopping</Link>
+      <Link style={{ textDecoration: "none" }} to="/">Continue Shopping</Link>
       {props.items.length > 0 ? (
         props.items.map(item => {
           return (
@@ -20,18 +20,20 @@ export function WishList(props) {
 
               <p>{item.inStock > 0 ? "" : "this item is out of stock"}</p>
               <p>{item.price} €</p>
+
               <div className="wishlist-remove-button">
                 <button onClick={() => props.setItems(item)}>
                   ADD TO CART
                 </button>
                 <button onClick={() => props.setItems(item)}>
                   {" "}
-                  <Link to="/checkout">Buy Now</Link>
+                  <Link style={{ textDecoration: "none" }}  to="/checkout">Buy Now</Link>
                 </button>
                 <button onClick={() => props.removeItems(item.id)}>
                   Remove{" "}
                 </button>
               </div>
+
             </div>
           );
         })

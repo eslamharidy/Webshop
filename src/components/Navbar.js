@@ -8,18 +8,19 @@ export default class Navbar extends Component {
       <div>
         <div className="navbar-wrapper">
           <div className="navbar">
-            <Link to={`/`}>
-              <img alt="logo" className="logo" src={require("../logo.svg")} />
+            <Link style={{ textDecoration: "none" }} to={`/`}>
+              <img className="logo" src={require("../logo.svg")} alt="logo" />
+
             </Link>
             <div className="icons-container">
-              <Link to={`/cart`}>
+              <Link style={{ textDecoration: "none" }} to={`/cart`}>
                 <img
                   className="cart-icon"
                   src={require("../cart.svg")}
                   alt="cart"
                 />
               </Link>
-              <Link to={`/wishlist`}>
+              <Link style={{ textDecoration: "none" }} to={`/wishlist`}>
                 <img
                   className="wishlist-icon"
                   src={require("../wishlist.svg")}
@@ -33,3 +34,4 @@ export default class Navbar extends Component {
     );
   }
 }
+
