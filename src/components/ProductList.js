@@ -18,9 +18,10 @@ function ProductList(props) {
                 alt={product.title}
               />
               <p>{product.name}</p>
+              <p>{product.price} €</p>
             </Link>
-<div className="buttons">
-            <button onClick={() => props.setItems(product)}> <Link to="/checkout">Buy Now</Link></button>
+            <div className="buttons">
+              <button onClick={() => props.setItems(product)}> <Link to="/checkout">Buy Now</Link></button>
               <button onClick={() => props.setItems(product)}>
                 ADD TO CART
               </button>

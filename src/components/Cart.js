@@ -24,7 +24,7 @@ function Cart(props) {
                                 style={{ maxWidth: 180, borderRadius: 40, display: "flex", margin: '10px' }} />
 
                             <p>{item.inStock > 0 ? '' : 'this item is out of stock'}</p>
-                            <p>{item.price}</p>
+                            <p>{item.price} €</p>
                             <button onClick={() => props.removeItems(item.id)}>Remove </button>
                         </div>
                     );
