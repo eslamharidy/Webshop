@@ -3,15 +3,3 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-.product-list {
-  display: flex;
-  justify-content: center;
-}
-.product-list-container {
-  width: 100%;
-  float: left;
-}
-
-.buttons {
-}

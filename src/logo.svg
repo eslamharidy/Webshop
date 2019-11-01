@@ -1,0 +1,24 @@
+<svg width="56.00000000000001" height="56.00000000000001" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="58" height="58" id="canvas_background" fill="#000000"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <path d="m6.478,32.046c0,0 -0.615,-3.073 5.839,-3.073c0,0 9.478,-2.356 13.935,-9.733c4.457,-7.376 -0.359,-4.251 14.752,-1.331c0,0 1.025,-0.104 0.975,0.819c-0.053,0.922 1.742,10.348 1.076,12.601c0,0 1.074,-0.102 0.408,4.148c0,0 -4.508,1.59 -19.62,1.129c-15.111,-0.463 -17.621,-2.563 -17.621,-2.563s-1.076,-0.818 0.256,-1.997z" stroke-miterlimit="10" stroke="#231F20" fill="#ffffff" id="svg_1"/>
+  <path d="m27.656,16.668c0,0 2.264,0.828 4.639,-0.828" stroke-miterlimit="10" stroke="#231F20" fill="none" id="svg_2"/>
+  <path d="m42.342,22.906c0,0 -10.27,7.067 -15.182,7.232c-4.914,0.167 -1.16,-4.636 -1.16,-4.636l0.995,-1.326c0,0 -0.995,4.252 3.422,2.319c4.418,-1.933 11.539,-5.134 11.539,-5.134" stroke-miterlimit="10" stroke="#231F20" fill="none" id="svg_3"/>
+  <path d="m17.792,26.605c0,0 1.026,6.93 5.448,6.846" stroke-miterlimit="10" stroke="#231F20" fill="none" id="svg_4"/>
+  <path d="m6.478,32.046c0,0 23.118,3.563 36.577,-0.718" stroke-miterlimit="10" stroke="#231F20" fill="none" id="svg_5"/>
+  <circle cx="25.625" cy="22.857" r="0.479" fill="#010101" id="svg_6"/>
+  <circle cx="24.375" cy="24.108" r="0.479" fill="#010101" id="svg_7"/>
+  <circle cx="22.957" cy="25.213" r="0.479" fill="#010101" id="svg_8"/>
+  <circle cx="21.292" cy="26.295" r="0.479" fill="#010101" id="svg_9"/>
+  <path d="m35.4,27.104c0.859,1.67 1.41,3.521 1.33,5.48" stroke-miterlimit="10" stroke="#231F20" fill="none" id="svg_10"/>
+  <path d="m34.031,24.895c-2.861,-3.91 -6.932,-6.43 -6.932,-6.43" stroke-miterlimit="10" stroke="#231F20" fill="none" id="svg_11"/>
+  <path d="m42.27,18.646c0,0 3.018,-0.014 0.391,4.533" stroke-miterlimit="10" stroke="#231F20" fill="none" id="svg_12"/>
+  <path d="m25.791,19.854c0,0.03 0,0.069 0,0.11" stroke-miterlimit="10" stroke="#231F20" fill="none" id="svg_13"/>
+  <path d="m7.041,30.604c0,0 5.192,-0.08 7.584,0.09c0.971,0.07 2.504,-0.5 3.986,-1.2" stroke-miterlimit="10" stroke="#231F20" fill="none" id="svg_14"/>
+ </g>
+</svg>
