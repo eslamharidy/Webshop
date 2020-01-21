@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8a91c235-7004-403c-9efb-2a3bc9065c70/deploy-status)](https://sneakers-district.netlify.com/)
 
-## Available Scripts
 
-In the project directory, you can run:
+#  👟 Sneakers-district 👟
+## [ 👟 Check out the deployed version here!  👟](https://sneakers-district.netlify.com/)
+## What this project is about
 
-### `npm start`
+This is our week 4 group of 2 students project to  do during the Academy.The Project we decided to do using React and Redux is to build a webshop for sneakers, more details: **[Goals for this project](#goals-for-this-project)**
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of contents:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- **[Technologies used](#technologies-used)**
+- **[Goals for this project](#goals-for-this-project)**
+- **[My git workflow](#my-git-workflow)**
+- **[My agile workflow](#my-agile-workflow)**
+- **[create-react-app-docs](#create-react-app)**
 
-### `npm test`
+## Technologies used
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 👀👇 Click links to view some samples in this project 👇👀
 
-### `npm run build`
+- **[react](./src/App.js )**  
+- **[redux](./src/reducers)**  
+- **[redux-thunk](./src/actions)**   
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Goals for this project:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- To practice for myself
+- To make an example for of a webshop with ability to add wishlista and cart before proceeding to payment.
+- **[To showcase disciplined git usage](#my-git-workflow)**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## My git workflow
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In this project I try to use:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Good commit messages
+- Well named branches
+- Pull requests with summaries
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If you have feedback to improve my git usage: **[please drop me a line!](https://www.linkedin.com/in/eslam-haridy-0b14316a/)** 
 
-## Learn More
+Here is my branching model for this project.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+master (auto deploys) ______________________
+                       \               /
+development             \_____________/- pull request
+                         \           /
+feature/some-feature      \_commits_/- pull request
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## My agile workflow
 
-### Code Splitting
+I try to maintain a backlog eventhough I'm working on a project by myself. That way people can quickly jump in and start helping out. It also displays how I split up my tasks and try to build this project in an iterative and incremental way!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Create React App
 
-### Making a Progressive Web App
+This project was scaffolded using the create-react-app cli. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+**[The standard create-react-app docs can be found in here](./create-react-app-docs.md)**
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
